@@ -1,0 +1,64 @@
+<ion-menu content-id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+</div>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+ 
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchItems()"></ion-searchbar>
+
+  <div class="user-profile">
+    <ion-avatar class="user-avatar">
+      <img src="https://th.bing.com/th/id/OIP.52T8HHBWh6b0dwrG6tSpVQAAAA?pid=ImgDet&rs=1" alt="User Avatar">
+    </ion-avatar>
+    <h2>{{ userName }}</h2>
+  </div>
+<ion-button shape="round" expand="full">Make Donation</ion-button>
+  <div class="donation-stats">
+    <h3>Donation Statistics</h3>
+    <p>Total Donations: {{ totalDonations }}</p>
+    <p>Last Donation Amount: {{ lastDonationAmount }}</p>
+   
+  </div>
+
+  <div class="recent-donations">
+    <h3>Recent Donations</h3>
+    <ion-list>
+      <ion-item *ngFor="let donation of recentDonations">
+        <ion-label>
+          <h2>{{ donation.donorName }}</h2>
+          <p>Amount: {{ donation.amount }}</p>
+          <p>Date: {{ donation.date }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Dashboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
