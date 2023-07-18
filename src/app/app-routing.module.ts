@@ -4,9 +4,11 @@ import { LoginPage } from './login/login.page';
 import { DashboardPage } from './dashboard/dashboard.page';
 import { SignupPage } from './signup/signup.page';
 import { ForgotPasswordPage } from './forgot-password/forgot-password.page';
+import { DonationHistoryPage } from './donation-history/donation-history.page';
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardPage },
+  { path: 'donation-history', component: DonationHistoryPage },
   { path: 'login', component: LoginPage },
   { path: 'signup', component: SignupPage },
   { path: 'forgot-password', component: ForgotPasswordPage },
@@ -39,6 +41,11 @@ const routes: Routes = [
     path: 'donation',
     loadChildren: () => import('./donation/donation.module').then( m => m.DonationPageModule)
   },
+  {
+    path: 'donation-history',
+    loadChildren: () => import('./donation-history/donation-history.module').then( m => m.DonationHistoryPageModule)
+  },
+
 ];
 
 @NgModule({

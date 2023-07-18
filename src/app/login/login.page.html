@@ -1,26 +1,28 @@
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Login</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-list>
-        <ion-item>
-          <ion-label position="floating">Email</ion-label>
-          <ion-input type="email" [(ngModel)]="email"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Password</ion-label>
-          <ion-input type="password" [(ngModel)]="password"></ion-input>
-        </ion-item>
-      </ion-list>
+<ion-content class="ion-padding" id="login-content">
+  <div class="login-card">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Login</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" [(ngModel)]="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" [(ngModel)]="password"></ion-input>
+          </ion-item>
+        </ion-list>
 
-      <ion-button expand="full" (click)="login()">Login</ion-button>
-    </ion-card-content>
-  </ion-card>
+        <ion-button expand="full" (click)="login()">Login</ion-button>
+      </ion-card-content>
+    </ion-card>
 
-  <div class="login-options">
-    <ion-button expand="full" (click)="navigateToSignUp()">Sign Up</ion-button>
-    <ion-button expand="full" (click)="navigateToForgotPassword()">Forgot Password</ion-button>
+    <div class="login-options">
+      <ion-button expand="full" (click)="navigateToSignUp()">Sign Up</ion-button>
+      <ion-button expand="full" (click)="navigateToForgotPassword()">Forgot Password</ion-button>
+    </div>
   </div>
 </ion-content>

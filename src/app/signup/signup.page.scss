@@ -1,0 +1,53 @@
+
+  .signup-card {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  ion-card {
+    background-color: #fff;
+  }
+  
+  ion-card-header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+  }
+  
+  ion-card-title {
+    font-size: 24px;
+    padding: 16px;
+  }
+  
+  ion-card-content {
+    padding: 16px;
+  }
+  
+  ion-list {
+    margin-bottom: 16px;
+  }
+  
+  ion-button {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    --ripple-color: #fff;
+  }
+  
+  /* Background animation */
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  #signup-content .signup-card {
+    animation: slideIn 0.5s;
+  }
+  

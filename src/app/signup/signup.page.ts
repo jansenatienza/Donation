@@ -11,7 +11,7 @@ export class SignupPage {
   fullName: string='';
   email: string='';
   password: string='';
-
+  backgroundImageUrl = '../assets/back.jpg';
   constructor(private router: Router) {}
 
   signUp() {

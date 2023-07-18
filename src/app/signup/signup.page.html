@@ -1,33 +1,35 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Sign Up
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Sign Up</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-list>
-        <ion-item>
-          <ion-label position="floating">Full Name</ion-label>
-          <ion-input type="text" [(ngModel)]="fullName"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Email</ion-label>
-          <ion-input type="email" [(ngModel)]="email"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Password</ion-label>
-          <ion-input type="password" [(ngModel)]="password"></ion-input>
-        </ion-item>
-      </ion-list>
+<ion-content class="ion-padding" id="signup-content" [style.background-image]="'url(' + backgroundImageUrl + ')'" style="background-size: cover; background-repeat: no-repeat; background-position: center center;">
+  <div class="signup-card">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Sign Up</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating">Full Name</ion-label>
+            <ion-input type="text" [(ngModel)]="fullName"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" [(ngModel)]="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" [(ngModel)]="password"></ion-input>
+          </ion-item>
+        </ion-list>
 
-      <ion-button expand="full" (click)="signUp()">Sign Up</ion-button>
-    </ion-card-content>
-  </ion-card>
+        <ion-button expand="full" (click)="signUp()">Sign Up</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
