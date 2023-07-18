@@ -1,0 +1,93 @@
+/* food-donation.page.scss */
+
+ion-header {
+    ion-toolbar {
+      --background: linear-gradient(45deg, #ee6e6e, #827af0);
+      --ion-background-color: black;
+      --ion-text-color: #ffffff;
+    }
+  }
+  
+  ion-content {
+    ion-padding {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  
+    h2 {
+      color: #333;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  
+    h3 {
+      color: #666;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  
+    p {
+      color: #777;
+      margin-top: 5px;
+    }
+  
+    .ion-card {
+      margin-top: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  
+    .ion-card-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 12px;
+    }
+  
+    .ion-input {
+      margin-bottom: 12px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      padding: 12px;
+    }
+  
+    .ion-button {
+      margin-top: 20px;
+      --background: #827af0;
+      --background-activated: #ee6e6e;
+      --background-hover: #ee6e6e;
+      --color: #ffffff;
+      --border-radius: 10px;
+      --padding-top: 12px;
+      --padding-bottom: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    .centered-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+  
+    .animated-background {
+      @keyframes pulse {
+        0% {
+          background-color: #e1e1e1;
+        }
+        50% {
+          background-color: #f2f2f2;
+        }
+        100% {
+          background-color: #e1e1e1;
+        }
+      }
+  
+      animation: pulse 10s infinite;
+    }
+  }
+  

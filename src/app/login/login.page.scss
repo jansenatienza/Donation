@@ -1,7 +1,7 @@
 #login-content {
-  --background: linear-gradient(45deg, #ffffff, #ffffff);
+  --background: linear-gradient(45deg, #55a5fa, #55a5fa);
   --ion-background-color: transparent;
-  --ion-text-color: #ffffff;
+  --ion-text-color: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,10 +10,10 @@
 }
 
 .login-card {
-  max-width: 400px;
+  max-width: 300px;
   width: 100%;
   padding: 20px;
-  background-color: #adabc2;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1s;
@@ -31,8 +31,8 @@
 }
 
 .login-options ion-button {
-  --background: #30465f;
-  color: #ffffff;
+  --background: #1534ff;
+  color: #000000;
   margin-bottom: 10px;
 }
 

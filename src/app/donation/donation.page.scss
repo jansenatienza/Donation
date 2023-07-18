@@ -1,20 +1,71 @@
+/* food-donation.page.scss */
 
-.ion-card {
+ion-header {
+  ion-toolbar {
+    --background: linear-gradient(45deg, #ee6e6e, #827af0);
+    --ion-background-color: black;
+    --ion-text-color: #ffffff;
+  }
+}
+
+ion-content {
+  ion-padding {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    color: #333;
+    font-weight: bold;
     margin-top: 20px;
   }
-  
-  .ion-card-title {
-    font-size: 20px;
+
+  h3 {
+    color: #666;
     font-weight: bold;
+    margin-top: 15px;
   }
-  
+
+  p {
+    color: #777;
+    margin-top: 5px;
+  }
+
+  .ion-card {
+    margin-top: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .ion-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
+  }
+
   .ion-input {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 12px;
   }
-  
+
   .ion-button {
     margin-top: 20px;
+    --background: #827af0;
+    --background-activated: #ee6e6e;
+    --background-hover: #ee6e6e;
+    --color: #ffffff;
+    --border-radius: 10px;
+    --padding-top: 12px;
+    --padding-bottom: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
+
   .centered-content {
     display: flex;
     flex-direction: column;
@@ -22,23 +73,26 @@
     justify-content: center;
     height: 100%;
   }
-  
-  .animated-background {
-    background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradientAnimation 10s ease infinite;
+
+  .back-button {
+    --color: #ffffff;
+    --background: #ee6e6e;
+    --border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
-  @keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+
+  .back-button ion-icon {
+    font-size: 20px;
   }
-  
-  
+  .thank-you-message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+  }
+}

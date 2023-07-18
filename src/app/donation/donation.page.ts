@@ -14,11 +14,9 @@ export class DonationPage {
   };
 
   submitDonation() {
-    // Handle the form submission
+   
     console.log('Donation submitted:', this.donation);
-    // You can perform further processing, validation, or send the donation data to a backend server
-  
-    // Reset the form after submission
+    this.donationSubmitted = true;
     this.donation = {
       donorName: '',
       amount: '',
@@ -31,5 +29,7 @@ export class DonationPage {
 goBack() {
   this.navCtrl.back();
 }
+donationSubmitted: boolean = false;
+
 
 }

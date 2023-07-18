@@ -39,7 +39,7 @@
 </ion-menu>
 
 
-<ion-content class="ion-padding" id="main-content" >
+<ion-content class="ion-padding" id="main-content"  img src="https://th.bing.com/th/id/OIP.52T8HHBWh6b0dwrG6tSpVQAAAA?pid=ImgDet&rs=1" alt="User Avatar" >
   <div class="centered-content animated-background">
   <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchItems()"></ion-searchbar>
 
@@ -47,10 +47,7 @@
     <ion-avatar class="user-avatar">
       <img src="https://th.bing.com/th/id/OIP.52T8HHBWh6b0dwrG6tSpVQAAAA?pid=ImgDet&rs=1" alt="User Avatar">
     </ion-avatar>
-    <h2>{{ userName }}</h2>
   </div>
-
-  <ion-button shape="round" expand="full" (click)="makeDonation()">Make Donation</ion-button>
 
   <div class="donation-stats">
     <h3>Donation Statistics</h3>
@@ -85,30 +82,60 @@
       <ion-button class="custom-card-button" (click)="donate()">Donate</ion-button>
     </ion-card-content>
   </ion-card>
+
+  <ion-card *ngFor="let story of stories">
+    <ion-card-header>
+      <ion-card-title>{{ story.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngIf="!expanded">
+      
+        <p>{{ story.description | slice:0:100 }}...</p>
+        <ion-button (click)="expanded = !expanded">See More</ion-button>
+      </div>
+      <div *ngIf="expanded">
+      
+        <p>{{ story.description }}</p>
+        <ion-button (click)="expanded = !expanded">See Less</ion-button>
+      </div>
+      <p>{{ story.testimonial }}</p>
+      <ion-button (click)="donate()">Donate</ion-button>
+    </ion-card-content>
+  </ion-card>
   
-
-  <ion-grid>
-    <ion-row>
-      <ion-col size="12" size-sm="6" size-md="4" *ngFor="let story of stories">
-        <ion-card>
-          <img [src]="story.image" alt="Impact Story Image">
-          <ion-card-header>
-            <ion-card-title>{{ story.title }}</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <p>{{ story.description }}</p>
-            <p>{{ story.testimonial }}</p>
-            <ion-button (click)="donate()">Donate</ion-button>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-  <div class="donation-progress">
-    <h4>Donation Progress</h4>
-    <ion-progress-bar [value]="currentDonation / targetGoal"></ion-progress-bar>
-    <p>{{ currentDonation }} / {{ targetGoal }}</p>
-  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Donation Progress</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-progress-bar [value]="currentDonation / targetGoal"></ion-progress-bar>
+      <p>{{ currentDonation }} / {{ targetGoal }}</p>
+    </ion-card-content>
+  </ion-card>
+  
+ 
 </div>
 </ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="tab1" (click)="makeDonation()">
+    <ion-icon name="cash"></ion-icon>
+    <ion-label>Make Donation</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab2" (click)="makeFoodDonation()">
+    <ion-icon name="fast-food-outline"></ion-icon>
+    <ion-label>Food</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab3" (click)="donateClothes()">
+    <ion-icon name="shirt-outline"></ion-icon>
+    <ion-label>Clothes</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab4" (click)="donate()">
+    <ion-icon name="medkit-outline"></ion-icon>
+    <ion-label>Medicines</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>

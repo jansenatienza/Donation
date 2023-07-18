@@ -1,3 +1,4 @@
+<!-- donation-history.page.html -->
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -12,7 +13,7 @@
     <ion-item *ngFor="let donation of donationHistory">
       <ion-label>
         <h3>Donor: {{ donation.donorName }}</h3>
-        <p>Amount: {{ donation.amount | currency }}</p>
+        <p>Amount: {{ donation.amount | currency:'PHP' }}</p>
         <p>Date: {{ donation.date }}</p>
       </ion-label>
     </ion-item>

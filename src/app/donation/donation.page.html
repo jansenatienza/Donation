@@ -1,6 +1,11 @@
- <ion-button slot="fixed" fill="clear" (click)="goBack()">
-    <ion-icon name="arrow-back"></ion-icon>
-  </ion-button>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content class="ion-padding">
   <div class="centered-content animated-background">
     <ion-card>
@@ -28,7 +33,10 @@
         </ion-list>
       </ion-card-content>
     </ion-card>
-
+    <div *ngIf="donationSubmitted" class="thank-you-message">
+      <h3>Thank You for Your Donation!</h3>
+      <p>Your generous contribution will make a difference in the lives of those in need.</p>
+    </div>
     <ion-button expand="full" (click)="submitDonation()">Submit Donation</ion-button>
   </div>
 </ion-content>

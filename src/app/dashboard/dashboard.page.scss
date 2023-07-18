@@ -1,10 +1,6 @@
-/* dashboard.page.scss */
-
-/* Background Animation */
 ion-content {
   --background: transparent;
   height: 100%;
-  position: relative;
   z-index: 0;
 }
 
@@ -45,7 +41,7 @@ ion-header {
 
 /* Content Styles */
 ion-content {
-  --background: #120962; /* Change the content background color */
+  --background: #55a5fa; /* Change the content background color */
 }
 
 /* User Profile Styles */
@@ -68,13 +64,13 @@ ion-content {
 .user-profile h2 {
   margin-top: 10px;
   font-size: 20px;
-  color: #11ff00;
+  color: green;
 }
 
 /* Donation Stats Styles */
 .donation-stats {
   padding: 20px;
-  background-color: #64ddff;
+  background-color: #ffffff;
   margin: 10px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
@@ -84,7 +80,7 @@ ion-content {
 
 .donation-stats h3 {
   margin-bottom: 10px;
-  color: #ff0000;
+  color: #000000;
 }
 
 .donation-stats p {
@@ -96,7 +92,7 @@ ion-content {
 .recent-donations {
   margin: 10px;
   padding: 20px;
-  background-color: #64ddff;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -135,7 +131,7 @@ ion-content {
 
 /* Button Styles */
 ion-button {
-  --background: #e2ff22;
+  --background: #4f6cff;
   --background-activated: #0056b3;
   --background-hover: #0056b3;
   --color: #fff;
@@ -178,47 +174,16 @@ ion-button:hover {
   margin-top: 20px;
   --background: #007bff;
 }
+/* food-donation.page.scss (or the relevant page's SCSS file) */
 
-/* dashboard.page.scss */
-
-/* Custom styles for ion-card-content */
-.custom-card-content {
-  background-color: #862626;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.button-icon-text {
+  align-items: center;
+  justify-content: center;
 }
 
-/* Custom styles for ion-card-title */
-.custom-card-title {
-  font-size: 18px;
-  font-weight: bold;
+.small-icon {
+  font-size: 16px; /* Adjust this value to change the icon size */
+  margin-right: 8px; /* Optional: Adds some space between the icon and the text */
 }
 
-/* Custom styles for ion-card-description */
-.custom-card-description {
-  font-size: 14px;
-  color: #000000;
-}
-
-/* Custom styles for ion-card-date */
-.custom-card-date {
-  font-size: 12px;
-  color: #000000;
-}
-
-/* Custom styles for ion-progress-bar */
-.custom-progress-bar {
-  margin-top: 10px;
-}
-
-/* Custom styles for ion-button inside ion-card */
-.custom-card-button {
-  --background: #007bff;
-  color: #ff0000;
-  margin-top: 15px;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
 

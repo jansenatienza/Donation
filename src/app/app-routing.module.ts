@@ -44,7 +44,19 @@ const routes: Routes = [
   {
     path: 'donation-history',
     loadChildren: () => import('./donation-history/donation-history.module').then( m => m.DonationHistoryPageModule)
+  },  {
+    path: 'food-donation',
+    loadChildren: () => import('./food-donation/food-donation.module').then( m => m.FoodDonationPageModule)
   },
+  {
+    path: 'clothes-donation',
+    loadChildren: () => import('./clothes-donation/clothes-donation.module').then( m => m.ClothesDonationPageModule)
+  },
+  {
+    path: 'medicine-donations',
+    loadChildren: () => import('./medicine-donations/medicine-donations.module').then( m => m.MedicineDonationsPageModule)
+  },
+
 
 ];
 

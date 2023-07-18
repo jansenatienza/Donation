@@ -12,7 +12,8 @@ export class DonationHistoryPage implements OnInit {
     { donorName: 'Alice', amount: 50, date: '2023-07-01' },
     { donorName: 'Bob', amount: 75, date: '2023-06-30' },
     { donorName: 'Charlie', amount: 200, date: '2023-06-28' },
-    // Add more donation history items here if needed
+    { donorName: 'David', amount: 100, date: '2023-06-27' },
+    { donorName: 'Eve', amount: 30, date: '2023-06-25' },
   ];
 
   constructor(private navCtrl: NavController) { }
